@@ -16,14 +16,13 @@ function cargarJson(){
                     <img src="${data.products[i].image}" alt="">
                 </div>
                 <div class="product-description">
-                    <h2>${data.products[i].name} - ${data.products[i].currency} ${data.products[i].cost}<h2>
+                    <h2>${data.products[i].name} - ${data.products[i].currency} ${data.products[i].cost}</h2>
                     <h4>${data.products[i].description}</h4>
                 </div>
                 <div class="product-price">
                     <h4>${data.products[i].soldCount}  vendidos</h4>
                 </div>
             </div>`;
-
         }
     })
     .catch(err => console.log(err))
