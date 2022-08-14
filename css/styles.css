@@ -188,3 +188,32 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+.product{
+  margin-bottom: 20px;
+  background-color: rgb(209, 209, 209);
+  border-radius: 10px;
+  border: 1px solid rgb(167, 167, 167);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1) .3s;
+}
+
+.title{
+  text-align: center;
+  margin: 30px 0px;
+}
+
+.product:hover{
+  background-color: rgb(182, 182, 182);
+}
+
+.product-description{
+  width: 50%;
+}
+
+.product img{
+  width: 400px;
+  border-radius: 10px;
+}
