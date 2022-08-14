@@ -217,3 +217,14 @@ a.custom-card:hover {
   width: 400px;
   border-radius: 10px;
 }
+
+#login-body{
+  background-color: #F8F9FA;
+}
+
+.form-signin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
