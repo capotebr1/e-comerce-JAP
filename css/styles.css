@@ -222,6 +222,23 @@ a.custom-card:hover {
   background-color: #F8F9FA;
 }
 
+#submit-button{
+  width: 200px;
+  background-color: #0087F7;
+  border: 2px solid #53C0FB;
+  border-radius: 10px;
+  padding: 5px;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1) .3s;
+}
+
+#submit-button:hover{
+  background-color: #8acaff;
+}
+
+.form-floating{
+  margin-bottom: 10px;
+}
+
 .form-signin{
   display: flex;
   flex-direction: column;
