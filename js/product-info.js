@@ -13,7 +13,7 @@ const descripcion = document.getElementById("descripcion");
 const puntaje = document.getElementById("score");
 const infoProducto = document.querySelector("#main-description");
 let comentarios;
-fetch(Url)
+fetch(Url) //cambio
 .then(response => response.json())
 .then(data => {
     console.log(data);
