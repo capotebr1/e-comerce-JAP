@@ -8,7 +8,6 @@ let commentsURL = "https://japceibal.github.io/emercado-api/products_comments/";
 commentsURL = commentsURL.concat(localStorage.getItem("itemInfo") + ".json");
 //E3 EJ3
 
-
 const descripcion = document.getElementById("descripcion");
 const puntaje = document.getElementById("score");
 const infoProducto = document.querySelector("#main-description");
@@ -44,13 +43,13 @@ fetch(Url)
             <h2>Comentarios</h2>
         </div>
     `;
-    comentarios = document.querySelector("#comments-container");
     const imgs = document.getElementById("imgs-container");
-
     data.images.forEach(img => {
         imgs.innerHTML += `<img src = "${img}">`;
     })
     
+    
+    comentarios = document.querySelector("#comments-container");
     fetch(commentsURL)
     .then(response => response.json())
     .then(data => {
