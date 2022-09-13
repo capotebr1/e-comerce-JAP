@@ -8,6 +8,19 @@ let commentsURL = "https://japceibal.github.io/emercado-api/products_comments/";
 commentsURL = commentsURL.concat(localStorage.getItem("itemInfo") + ".json");
 //E3 EJ3
 
+function addComment(container , user , time , description){
+    container.innerHTML += `
+        <div class = "comment">
+            <div class = "comment-main">
+                ${user} / ${time} / 
+            </div>
+            <div class = "comment-description">
+                <p>${description}</p>
+            </div>
+        </div>
+    `;
+}
+
 const descripcion = document.getElementById("descripcion");
 const puntaje = document.getElementById("score");
 const infoProducto = document.querySelector("#main-description");
@@ -47,23 +60,13 @@ fetch(Url)
     data.images.forEach(img => {
         imgs.innerHTML += `<img src = "${img}">`;
     })
-    
-    
-    comentarios = document.querySelector("#comments-container");
+
     fetch(commentsURL)
     .then(response => response.json())
     .then(data => {
-    data.forEach((element , index) => {
-            comentarios.innerHTML += `
-                <div class = "comment">
-                    <div class = "comment-main">
-                        ${element.user} / ${element.dateTime} / 
-                    </div>
-                    <div class = "comment-description">
-                        <p>${element.description}</p>
-                    </div>
-                </div>
-            `;
+        comentarios = document.querySelector("#comments-container");
+        data.forEach((element , index) => {
+            addComment(comentarios , element.user , element.dateTime , element.description);
 
             for(let i = 0; i < element.score; i++){
                 document.getElementsByClassName("comment-main")[index].innerHTML += `<span class="fa fa-star checked"></span>`;
@@ -81,16 +84,7 @@ fetch(Url)
 document.getElementById("comment-button").addEventListener("click" , () => {
     if(puntaje.value >= 1 && puntaje.value <= 5 && descripcion.value != undefined && descripcion.value != ""){
         const hoy = new Date();
-        comentarios.innerHTML += `
-            <div class = "comment">
-                <div class = "comment-main">
-                    ${localStorage.getItem("account")} / ${hoy.toLocaleString("sv-SE")} / 
-                </div>
-                <div class = "comment-description">
-                    <p>${descripcion.value}</p>
-                </div>
-            </div>
-        `;
+        addComment(comentarios , localStorage.getItem("account"), hoy.toLocaleString("sv-SE"), descripcion.value);
 
         let commentMain = document.getElementsByClassName("comment-main");
 
