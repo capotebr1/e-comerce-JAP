@@ -10,6 +10,7 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3fd6dae7a9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -38,10 +39,47 @@
   </nav>
   <main class="pb-5 container">
     <div class="title">
-      <h1>Productos</h1>
-      <h2>Verás aquí todos los productos de la categoria "Autos"</h2>
     </div>
     
+    <div class="container">
+      <div class="row">
+        <div class="col text-end">
+          <div class="btn-group btn-group-toggle mb-4" data-bs-toggle="buttons">
+            <input type="radio" class="btn-check" name="options" id="sortAsc">
+            <label class="btn btn-light" for="sortAsc"><i class="fa-solid fa-arrow-down-wide-short"></i>$</label>
+            <input type="radio" class="btn-check" name="options" id="sortDesc">
+            <label class="btn btn-light" for="sortDesc"><i class="fa-solid fa-arrow-up-short-wide"></i>$</label>
+            <input type="radio" class="btn-check" name="options" id="sortByCount" checked>
+            <label class="btn btn-light" for="sortByCount"><i class="fa-solid fa-chart-column"></i></label>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div >
+          <input type="search" name="buscar" id="buscador" placeholder="buscar producto">
+          <label for="buscar" style="font-size: 20px;"><i class="fa-solid fa-magnifying-glass" style="color: #333;"></i></label>
+        </div>
+        <div class="col-lg-6 offset-lg-6 col-md-12 mb-1 container">
+          <div class="row container p-0 m-0">
+            <div class="col">
+              <p class="font-weight-normal text-end my-2">Cant.</p>
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="min." id="rangeFilterCountMin">
+            </div>
+            <div class="col">
+              <input class="form-control" type="number" placeholder="máx." id="rangeFilterCountMax">
+            </div>
+            <div class="col-3 p-0">
+              <div class="btn-group" role="group">
+                <button class="btn btn-light btn-block" id="rangeFilterCount">Filtrar</button>
+                <button class="btn btn-link btn-sm" id="clearRangeFilter">Limpiar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <div id="products_container">
       
     </div>
@@ -67,6 +105,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/products.js"></script>
+  <script src="js/nav-profile.js"></script>
 </body>
 
 </html>

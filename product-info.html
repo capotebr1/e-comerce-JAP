@@ -36,11 +36,17 @@
       </div>
     </div>
   </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
+  <main id="main-content">
+    <div id="main-description">
+      
+    </div>
+    <div id="make-comment" >
+      <h2>Comentar</h2>
+      <h4>Tu Opinión</h4>
+      <textarea id="descripcion" cols="30" rows="3" placeholder="Ingrese comentario aqui"></textarea>
+      <h4>Tu puntuación</h4>
+      <input type="number" id="score" min="1" max="5">
+      <button id="comment-button">Enviar</button>
     </div>
   </main>
   <footer class="text-muted">
@@ -64,6 +70,7 @@
   <script src="js/bootstrap.bundle.min.js"></script>
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
+  <script src="js/nav-profile.js"></script>
 </body>
 
 </html>

@@ -190,10 +190,9 @@ a.custom-card:hover {
 }
 
 .product{
-  margin-bottom: 20px;
-  background-color: rgb(209, 209, 209);
-  border-radius: 10px;
-  border: 1px solid rgb(167, 167, 167);
+  margin-bottom: 5px;
+  background-color: rgb(234, 234, 234);
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
   padding: 20px;
@@ -206,16 +205,32 @@ a.custom-card:hover {
 }
 
 .product:hover{
-  background-color: rgb(182, 182, 182);
+  background-color: rgb(220, 234, 255);
 }
 
+
 .product-description{
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1) .2s;
   width: 50%;
 }
 
+a{
+  text-decoration: none;
+}
+
 .product img{
-  width: 400px;
-  border-radius: 10px;
+  width: 300px;
+  margin-right: 20px;
+  border-radius: 15px;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1) .3s;
+}
+
+.product img:hover{
+  width: 450px;
+}
+
+.product:hover .product-description{
+  color: #0D6EFD;
 }
 
 #login-body{
@@ -244,4 +259,103 @@ a.custom-card:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+}
+
+.error{
+  color: red;
+  margin: 10px auto;
+}
+
+.form-error{
+  background-color: rgba(255, 0, 0, 0.275);
+  border: 2px solid red;
+}
+
+.form-valid{
+  border: 2px solid rgb(82, 255, 85);
+}
+
+#buscador{
+  padding: 15px;
+  border-radius: 25px;
+  border: 0;
+  background-color: #EAEAEA;
+  width: 350px;
+}
+
+.filtro{
+  display: none;
+}
+
+
+#main-content{
+  padding: 25px 150px;
+  font-size: 30px;
+  color: #333;
+}
+
+#main-content h1,h4{
+  font-weight: 400;
+}
+
+#main-content p{
+  font-size: 20px;
+}
+
+#main-content img{
+  width: 250px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.comment{
+  padding: 5px;
+  padding-left: 20px;
+  border-radius: 3px;
+  margin-bottom: 3px;
+  background-color: #f3f3f3;
+}
+
+#make-comment{
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  justify-content: center;
+}
+
+#make-content input{
+  width: 300px;
+}
+
+#descripcion{
+  width: 400px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f3f3f3;
+  padding: 20px;
+  font-size: 20px;
+}
+
+#score{
+  width: 200px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f3f3f3;
+  padding: 20px;
+  font-size: 20px;
+}
+
+#make-comment{
+  margin: 30px;
+}
+
+#comment-button{
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  background-color: #0D6EFD;
+  font-size: 20px;
+  margin-top: 20px;
 }
