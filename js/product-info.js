@@ -64,7 +64,6 @@ fetch(Url)
             <h2>Comentarios</h2>
         </div>
         <hr>
-        
     `;
     const imgs = document.getElementById("imgs-container");
     data.images.forEach(img => {
