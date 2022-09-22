@@ -98,27 +98,27 @@ fetch(Url)
             window.location = "product-info.html";
         })
     })
+    fetch(commentsURL)
+    .then(response => response.json())
+    .then(data => {
+        comentarios = document.querySelector("#comments-container");
+        data.forEach((element , index) => {
+            addComment(comentarios , element.user , element.dateTime , element.description);
+    
+            for(let i = 0; i < element.score; i++){
+                document.getElementsByClassName("comment-main")[index].innerHTML += `<span class="fa fa-star checked"></span>`;
+            }
+    
+            for(let i = 5 - element.score ; i > 0 ; i--){
+                document.getElementsByClassName("comment-main")[index].innerHTML += `<span class="fa fa-star"></span>`;
+            }
+        })
+    })
+    .catch(error => console.log(error))
 })
 .catch(error => console.log(error));
 
 
-fetch(commentsURL)
-.then(response => response.json())
-.then(data => {
-    comentarios = document.querySelector("#comments-container");
-    data.forEach((element , index) => {
-        addComment(comentarios , element.user , element.dateTime , element.description);
-
-        for(let i = 0; i < element.score; i++){
-            document.getElementsByClassName("comment-main")[index].innerHTML += `<span class="fa fa-star checked"></span>`;
-        }
-
-        for(let i = 5 - element.score ; i > 0 ; i--){
-            document.getElementsByClassName("comment-main")[index].innerHTML += `<span class="fa fa-star"></span>`;
-        }
-    })
-})
-.catch(error => console.log(error))
 
 document.getElementById("comment-button").addEventListener("click" , () => {
     if(puntaje.value >= 1 && puntaje.value <= 5 && descripcion.value != undefined && descripcion.value != " "){
