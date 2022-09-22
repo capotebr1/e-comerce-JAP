@@ -68,7 +68,7 @@ fetch(Url)
     `;
     const imgs = document.getElementById("imgs-container");
     data.images.forEach(img => {
-        imgs.innerHTML += `<img class="imgs-column" src = "${img}">`;
+        imgs.innerHTML += `<img class="imgs-column" src = "${img}">`; //hola
     });
 
     
