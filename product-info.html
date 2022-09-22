@@ -40,13 +40,24 @@
     <div id="main-description">
       
     </div>
+    
     <div id="make-comment" >
       <h2>Comentar</h2>
       <h4>Tu Opinión</h4>
       <textarea id="descripcion" cols="30" rows="3" placeholder="Ingrese comentario aqui"></textarea>
       <h4>Tu puntuación</h4>
-      <input type="number" id="score" min="1" max="5">
+      <select name="select" id="score">
+        <option value="1">1 <span class="fa fa-star checked"></span></option>
+        <option value="2">2 <span class="fa fa-star checked"></span></option>
+        <option value="3">3 <span class="fa fa-star checked"></span></option>
+        <option value="4">4 <span class="fa fa-star checked"></span></option>
+        <option value="5">5 <span class="fa fa-star checked"></span></option>
+      </select> 
       <button id="comment-button">Enviar</button>
+    </div>
+    <hr>
+    <h2>Productos Relacionados</h2>
+    <div id="relacionados">
     </div>
   </main>
   <footer class="text-muted">

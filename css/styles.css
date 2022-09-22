@@ -315,6 +315,7 @@ a{
   border-radius: 3px;
   margin-bottom: 3px;
   background-color: #f3f3f3;
+  width: 60%;
 }
 
 #make-comment{
@@ -358,4 +359,97 @@ a{
   background-color: #0D6EFD;
   font-size: 20px;
   margin-top: 20px;
+}
+
+.related-product{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(167, 167, 167);
+  border-radius: 10px;
+  width: 300px;
+  margin: 10px;
+  cursor: pointer;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1) .2s;
+  box-shadow: 0px 15px 15px 0px rgba(0, 0, 0, 0.1);
+}
+
+.related-product img{
+  width: 100%;
+}
+
+.related-product:hover{
+  background-color: rgba(13,110,253,0.1);
+}
+
+#relacionados{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#imgs{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+#img-main img{
+  height: 100%;
+  width: 100%;
+  min-width: 80%;
+  border: 2px solid #bbbbbb;
+  animation: spawn .3s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+
+
+
+@keyframes spawn {
+  from{
+    opacity: 0.5;
+  }
+  to{
+    opacity: 1;
+    border: 2px solid #bbbbbb;
+  }
+}
+
+#imgs-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#imgs-column{
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.2);
+  border: 3px solid #bbbbbb ;
+  transition: cubic-bezier(0.215, 0.610, 0.355, 1) .2s;
+  cursor: pointer;
+}
+
+.selected{
+  border: 3px solid #0087F7;
+}
+
+#imgs-container img:hover{
+  box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.3);
+  border: 2px solid #0087F7 ;
+}
+
+#product-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(243, 243, 243, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#product-info{
+  width: 30%;
+  height: 100%;
+  padding: 20px;
+  background-color: #def5f9;
+  border-radius: 10px;
+  margin: 25px;
 }
